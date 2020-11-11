@@ -9,7 +9,8 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
-    mavenCentral()
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
 }
 
 dependencies {
@@ -17,8 +18,13 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
-}
+    /**
+     * google
+     */
+    compile 'com.google.guava:guava:29.0-jre'
 
-test {
-    useJUnitPlatform()
+    /**
+     * spring-boot web
+     */
+    compile 'org.springframework.boot:spring-boot-starter-web:2.3.4.RELEASE'
 }
