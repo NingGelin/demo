@@ -10,7 +10,7 @@ sourceCompatibility = '1.8'
 
 repositories {
     maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-    maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+    maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
 }
 
 dependencies {
@@ -18,6 +18,7 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    
     /**
      * google
      */
@@ -27,4 +28,14 @@ dependencies {
      * spring-boot web
      */
     compile 'org.springframework.boot:spring-boot-starter-web:2.3.4.RELEASE'
+
+    /**
+     * 热部署 
+     * 说明：修改完代码后不需要重启，简单测了下需要3秒以后反应过来
+     * 还需要做两个配置
+     *  1. 按"Ctrl+Shift+A", 弹出窗口, 输入"Registry", 找到compiler.automake.allow.when.app.running, 打勾
+     *  2. file->Setting 搜索compiler, 找到Build project automatically打勾
+     *  参考网址：https://www.cnblogs.com/daxiaxia/p/9089526.html
+     */
+    compile 'org.springframework.boot:spring-boot-devtools:2.3.4.RELEASE'
 }
