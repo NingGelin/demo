@@ -38,4 +38,9 @@ dependencies {
      *  参考网址：https://www.cnblogs.com/daxiaxia/p/9089526.html
      */
     compile 'org.springframework.boot:spring-boot-devtools:2.3.4.RELEASE'
+
+    /**
+     * 模板引擎
+     */
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf:2.3.3.RELEASE'
 }
