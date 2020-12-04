@@ -2,10 +2,15 @@ package com.example.demo;
 
 public class TempTest {
     public static void main(String[] args) {
-        float num = 5/3;
-        System.out.println(num);
+        String price = "255.00";
 
-        Integer[] shipping = {5};
-        System.out.println(shipping[0]);
+        if (Double.valueOf(price) < 0)
+        {
+            System.out.println("error");
+        }
+        else
+        {
+            System.out.println(Double.valueOf(price));
+        }
     }
 }
