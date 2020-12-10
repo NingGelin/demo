@@ -10,4 +10,10 @@ public class IndexEndpoint {
     {
         return "index";
     }
+
+    @GetMapping("/testPageIndex")
+    public String test()
+    {
+        return "test";
+    }
 }
