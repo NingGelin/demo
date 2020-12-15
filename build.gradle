@@ -1,17 +1,14 @@
 plugins {
-    id 'org.springframework.boot' version '2.3.5.RELEASE'
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'java'
 }
-
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
 
 repositories {
     maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
     maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
 }
+
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
@@ -28,7 +25,7 @@ dependencies {
     /**
      * spring-boot web
      */
-    compile 'org.springframework.boot:spring-boot-starter-web:2.3.4.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-web:'
 
     /**
      * 热部署 
@@ -38,12 +35,39 @@ dependencies {
      *  2. file->Setting 搜索compiler, 找到Build project automatically打勾
      *  参考网址：https://www.cnblogs.com/daxiaxia/p/9089526.html
      */
-    compile 'org.springframework.boot:spring-boot-devtools:2.3.4.RELEASE'
+    compile 'org.springframework.boot:spring-boot-devtools:'
 
     /**
      * 模板引擎
      */
-    compile 'org.springframework.boot:spring-boot-starter-thymeleaf:2.3.3.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-thymeleaf:'
 
+    /**
+     *
+     */
     compile 'org.aspectj:aspectjweaver:1.9.4'
+
+    /**
+     * h2数据库
+     */
+    compile 'com.h2database:h2:1.4.197'
+
+    /**
+     * jdbc
+     */
+    //compile 'org.springframework:spring-jdbc:5.2.9.RELEASE'
+
+    /**
+     * javax
+     */
+    //compile 'javax.persistence:javax.persistence-api:2.2'
+
+    /**
+     * hibernate
+     */
+    //compile 'org.hibernate:hibernate-core:5.3.10.Final'
+
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa:'
 }
+
+
