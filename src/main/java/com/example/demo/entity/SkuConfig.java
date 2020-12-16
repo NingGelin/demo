@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Proxy(lazy = false)
 @Entity
-@Table(name = "SKU_CONFIG")
+@Table(name = "sku_config")
 public class SkuConfig {
     @Id
     private String id;

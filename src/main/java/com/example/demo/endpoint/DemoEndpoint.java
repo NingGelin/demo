@@ -44,6 +44,12 @@ public class DemoEndpoint {
     public ApiResponse skuPriceSearch()
     {
         SkuPrice skuPrice = skuPriceRepository.getOne("1");
+//        SkuPrice skuPrice = new SkuPrice();
+//        skuPrice.setId("10");
+//        skuPrice.setPrice("13213");
+//        skuPrice.setSkuId("1321");
+//        skuPriceRepository.save(skuPrice);
+//        List<SkuPrice> skuPriceList = skuPriceRepository.findAll();
         return new ApiResponse(skuPrice);
     }
 }

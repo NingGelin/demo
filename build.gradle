@@ -37,6 +37,8 @@ dependencies {
      */
     compile 'org.springframework.boot:spring-boot-devtools:'
 
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa:'
+
     /**
      * 模板引擎
      */
@@ -50,15 +52,15 @@ dependencies {
     /**
      * h2数据库
      */
-    compile 'com.h2database:h2:1.4.197'
+    //runtimeOnly 'com.h2database:h2:1.4.197'
 
     /**
      * jdbc
      */
-    //compile 'org.springframework:spring-jdbc:5.2.9.RELEASE'
+    //compile 'org.springframework:spring-jdbc:'
 
     /**
-     * javax
+     * javax.persistence
      */
     //compile 'javax.persistence:javax.persistence-api:2.2'
 
@@ -67,7 +69,10 @@ dependencies {
      */
     //compile 'org.hibernate:hibernate-core:5.3.10.Final'
 
-    compile 'org.springframework.boot:spring-boot-starter-data-jpa:'
+    /**
+     * mysql
+     */
+    compile 'mysql:mysql-connector-java:8.0.22'
 }
 
 
