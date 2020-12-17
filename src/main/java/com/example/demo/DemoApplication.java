@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @SpringBootApplication
 @ResponseBody
-public class DemoApplication {
-
-    public static void main(String[] args) {
+public class DemoApplication
+{
+    public static void main(String[] args)
+    {
         SpringApplication.run(DemoApplication.class, args);
     }
-
 }

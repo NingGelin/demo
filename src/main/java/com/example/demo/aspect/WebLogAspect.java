@@ -11,9 +11,9 @@ import org.springframework.stereotype.Component;
 
 /**
  * 日志切面配置
- * @Author chenglu
- * @Date 2020/3/27
- * @Version V1.0
+ *
+ * @author chenglu
+ * @date 2020-03-27
  **/
 @Aspect
 @Component
@@ -49,7 +49,7 @@ public class WebLogAspect
         LOGGER.info("------------------------------------- Start ---------------------------------------");
         // 打印调用 controller 的全路径以及执行方法
         LOGGER.info("Class Method    : {}.{}, Request Params  : {}", joinPoint.getTarget().getClass().getName(),
-                    signature.getName(), new Gson().toJson(joinPoint.getArgs()));
+                signature.getName(), new Gson().toJson(joinPoint.getArgs()));
     }
 
     /**
@@ -64,6 +64,7 @@ public class WebLogAspect
 
     /**
      * 环绕
+     *
      * @param proceedingJoinPoint xx
      * @return Object
      * @throws Throwable 异常
@@ -74,7 +75,8 @@ public class WebLogAspect
         long startTime = System.currentTimeMillis();
         Object result = proceedingJoinPoint.proceed();
         // 打印出参 执行耗时
-        LOGGER.info("Response Params : {}, Cost Time : {} ms", new Gson().toJson(result), System.currentTimeMillis() - startTime);
+        LOGGER.info("Response Params : {}, Cost Time : {} ms", new Gson().toJson(result),
+                System.currentTimeMillis() - startTime);
         return result;
     }
 

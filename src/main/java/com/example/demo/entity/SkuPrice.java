@@ -8,8 +8,9 @@ import javax.persistence.Table;
 
 @Proxy(lazy = false)
 @Entity
-@Table(name = "SKU_PRICE")
-public class SkuPrice {
+@Table(name = "sku_price")
+public class SkuPrice
+{
     @Id
     private String id;
 
@@ -17,27 +18,33 @@ public class SkuPrice {
 
     private String price;
 
-    public String getId() {
+    public String getId()
+    {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(String id)
+    {
         this.id = id;
     }
 
-    public String getSkuId() {
+    public String getSkuId()
+    {
         return skuId;
     }
 
-    public void setSkuId(String skuId) {
+    public void setSkuId(String skuId)
+    {
         this.skuId = skuId;
     }
 
-    public String getPrice() {
+    public String getPrice()
+    {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(String price)
+    {
         this.price = price;
     }
 }

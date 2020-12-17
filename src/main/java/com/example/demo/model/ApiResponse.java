@@ -2,7 +2,8 @@ package com.example.demo.model;
 
 import java.io.Serializable;
 
-public class ApiResponse<T> implements Serializable {
+public class ApiResponse<T> implements Serializable
+{
     private Boolean success;
     private T result;
     private String resultMessage;
@@ -32,35 +33,43 @@ public class ApiResponse<T> implements Serializable {
         this.resultCode = resultCode;
     }
 
-    public Boolean getSuccess() {
+    public Boolean getSuccess()
+    {
         return success;
     }
 
-    public void setSuccess(Boolean success) {
+    public void setSuccess(Boolean success)
+    {
         this.success = success;
     }
 
-    public T getResult() {
+    public T getResult()
+    {
         return result;
     }
 
-    public void setResult(T result) {
+    public void setResult(T result)
+    {
         this.result = result;
     }
 
-    public String getResultMessage() {
+    public String getResultMessage()
+    {
         return resultMessage;
     }
 
-    public void setResultMessage(String resultMessage) {
+    public void setResultMessage(String resultMessage)
+    {
         this.resultMessage = resultMessage;
     }
 
-    public Integer getResultCode() {
+    public Integer getResultCode()
+    {
         return resultCode;
     }
 
-    public void setResultCode(Integer resultCode) {
+    public void setResultCode(Integer resultCode)
+    {
         this.resultCode = resultCode;
     }
 }

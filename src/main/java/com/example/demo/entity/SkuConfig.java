@@ -9,7 +9,8 @@ import javax.persistence.Table;
 @Proxy(lazy = false)
 @Entity
 @Table(name = "sku_config")
-public class SkuConfig {
+public class SkuConfig
+{
     @Id
     private String id;
 
@@ -17,27 +18,33 @@ public class SkuConfig {
 
     private String status;
 
-    public String getId() {
+    public String getId()
+    {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(String id)
+    {
         this.id = id;
     }
 
-    public String getSkuId() {
+    public String getSkuId()
+    {
         return skuId;
     }
 
-    public void setSkuId(String skuId) {
+    public void setSkuId(String skuId)
+    {
         this.skuId = skuId;
     }
 
-    public String getStatus() {
+    public String getStatus()
+    {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(String status)
+    {
         this.status = status;
     }
 }
