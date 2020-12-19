@@ -9,12 +9,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+
 /**
  * 日志切面配置
  *
  * @author chenglu
  * @date 2020-03-27
  **/
+
 @Aspect
 @Component
 public class WebLogAspect
@@ -53,16 +55,6 @@ public class WebLogAspect
     }
 
     /**
-     * 在切点之后
-     */
-    @After("webLog()")
-    public void doAfter()
-    {
-        // 接口结束后换行，方便分割查看
-        LOGGER.info("------------------------------------- End ---------------------------------------" + LINE_SEPARATOR);
-    }
-
-    /**
      * 环绕
      *
      * @param proceedingJoinPoint xx
@@ -80,4 +72,13 @@ public class WebLogAspect
         return result;
     }
 
+    /**
+     * 在切点之后
+     */
+    @After("webLog()")
+    public void doAfter()
+    {
+        // 接口结束后换行，方便分割查看
+        LOGGER.info("------------------------------------- End ---------------------------------------" + LINE_SEPARATOR);
+    }
 }

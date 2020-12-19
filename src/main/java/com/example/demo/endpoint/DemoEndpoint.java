@@ -5,6 +5,8 @@ import com.example.demo.model.ApiResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Map;
 
@@ -14,10 +16,11 @@ public class DemoEndpoint
 {
     private static final Logger logger = LoggerFactory.getLogger(DemoEndpoint.class);
 
-    @WebLog
     @GetMapping("test")
+    @WebLog
     public ApiResponse test()
     {
+        logger.info("hello world");
         return new ApiResponse();
     }
 
@@ -26,5 +29,6 @@ public class DemoEndpoint
     public ApiResponse test2(@RequestParam Map<String, Object> param)
     {
         return new ApiResponse(param);
+
     }
 }
