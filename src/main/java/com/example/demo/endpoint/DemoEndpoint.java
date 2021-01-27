@@ -112,8 +112,6 @@ public class DemoEndpoint
         return null;
     }
 
-
-
     private void buildMessage()
     {
         try

@@ -12,11 +12,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * 日志切面配置
- *
- * @author chenglu
- * @date 2020-03-27
  **/
-
 @Aspect
 @Component
 public class WebLogAspect
