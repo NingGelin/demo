@@ -5,8 +5,11 @@ plugins {
 }
 
 repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
     mavenLocal()
     mavenCentral()
+    jcenter()
 }
 
 
@@ -73,6 +76,19 @@ dependencies {
      * mysql
      */
     compile 'mysql:mysql-connector-java:8.0.22'
+
+    /**
+     * actuator监控
+     */
+    compile 'org.springframework.boot:spring-boot-starter-actuator'
+
+    compile 'com.amazonaws:aws-java-sdk-s3:1.11.415'
+
+    compile 'io.minio:minio:8.0.3'
+
+    //compile 'com.baidu.aip:java-sdk:4.15.3'
+
+    compile 'commons-httpclient:commons-httpclient:3.1'
 }
 
 
