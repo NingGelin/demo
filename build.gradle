@@ -47,7 +47,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf:'
 
     /**
-     *
+     * 切面编程
      */
     compile 'org.aspectj:aspectjweaver:1.9.4'
 
@@ -81,13 +81,20 @@ dependencies {
      */
     compile 'org.springframework.boot:spring-boot-starter-actuator'
 
+    /**
+     * aws sdk
+     */
     compile 'com.amazonaws:aws-java-sdk-s3:1.11.415'
 
+    /**
+     * minio sdk
+     */
     compile 'io.minio:minio:8.0.3'
 
-    //compile 'com.baidu.aip:java-sdk:4.15.3'
-
-    compile 'commons-httpclient:commons-httpclient:3.1'
+    /**
+     * baidu api
+     */
+    compile 'com.baidu.aip:java-sdk:4.15.3'
 }
 
 
