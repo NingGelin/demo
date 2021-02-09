@@ -1,9 +1,9 @@
-ARG         REPO=hub.docker.com
+ARG         NAME=demo
 #ARG         SINO_REPO=xast.test.com
-FROM        ${REPO}/ngl525/java
+FROM        ngl525/java
 MAINTAINER  NingGelin
-RUN         mkdir /usr/local/SINO/demo
-ADD         build/libs/demo.jar /usr/local/SINO/demo
-WORKDIR     /usr/local/SINO/demo/
-#CMD         ["bin/virtual-supplier", "start"]
+WORKDIR     /usr/local/SINO/$NAME/
+RUN         mkdir /usr/local/SINO/$NAME
+ADD         build/libs/$NAME.jar /usr/local/SINO/$NAME
+RUN         rm -rf /usr/local/SINO/$NAME/$NAME.jar
 CMD         ["java","-jar","demo.jar"]
