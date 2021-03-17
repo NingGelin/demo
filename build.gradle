@@ -82,17 +82,22 @@ dependencies {
     /**
      * aws sdk
      */
-    compile 'com.amazonaws:aws-java-sdk-s3:1.11.415'
+    //compile 'com.amazonaws:aws-java-sdk-s3:1.11.415'
 
     /**
      * minio sdk
      */
-    compile 'io.minio:minio:8.0.3'
+    //compile 'io.minio:minio:8.0.3'
 
     /**
      * baidu api
      */
     //compile 'com.baidu.aip:java-sdk:4.15.3'
+
+    /**
+     * swagger annotations
+     */
+    //compile 'io.swagger:swagger-annotations:1.6.2'
 }
 
 

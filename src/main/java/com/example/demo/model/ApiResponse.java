@@ -25,7 +25,7 @@ public class ApiResponse<T> implements Serializable
         this.resultCode = 0;
     }
 
-    public ApiResponse(Boolean success, String resultMessage, Integer resultCode)
+    public ApiResponse(Boolean success, Integer resultCode, String resultMessage)
     {
         this.success = success;
         this.result = null;
